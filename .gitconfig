@@ -1,0 +1,42 @@
+[core]
+	autocrlf = false
+	excludesfile = "~/.gitignore_global"
+	editor = vim
+[user]
+	name = Jaron Zijlstra
+	email = support@jaronline.dev
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[alias]
+	rp = rev-parse
+	ba = branch -a
+	bd = branch -d
+	bD = branch -D
+	c = commit
+	can = commit --amend --no-edit
+	co = checkout
+	cp = cherry-pick
+	l = pull
+	p = push
+	pls = push --force-with-lease
+	rbi = rebase -i
+	rba = rebase --abort
+	rbc = rebase --continue
+	st = status
+	sub = submodule
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[merge]
+	tool = vscode
+	autostash = true
+[mergetool "vscode"]
+	cmd = code -wr --diff $LOCAL $REMOTE
+[rebase]
+	autostash = true
+[push]
+	autoSetupRemote = true
