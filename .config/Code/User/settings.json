@@ -21,5 +21,14 @@
         ".profile": ".profile.bak",
         ".bashrc": ".bash_history, .bash_logout"
     },
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Xcode Classic (Dark)",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "cpp": true
+    },
+    "geminicodeassist.inlineSuggestions.enableAuto": false
 }
