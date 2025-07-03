@@ -5,7 +5,7 @@
 [user]
 	name = Jaron Zijlstra
 	email = support@jaronline.dev
-	signingKey = /home/jaron/.ssh/github.pub
+	signingKey = /home/jaronz/.ssh/git.pub
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
