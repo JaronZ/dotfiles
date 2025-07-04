@@ -106,3 +106,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Node Version Manager (NVM)
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Zoxide
+eval "$(zoxide init zsh --cmd cd)"
