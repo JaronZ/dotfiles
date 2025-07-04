@@ -28,6 +28,7 @@
 	rbc = rebase --continue
 	st = status
 	sub = submodule
+	la = config --get-regexp '^alias\\.'
 [init]
 	defaultBranch = main
 [pull]
