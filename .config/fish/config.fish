@@ -3,3 +3,6 @@ if status is-interactive
 end
 
 zoxide init fish --cmd cd | source
+
+# FVM
+set --export PATH /home/jaronz/.fvm_flutter/bin $PATH
