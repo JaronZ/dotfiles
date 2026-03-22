@@ -2,6 +2,7 @@
 	autocrlf = false
 	excludesfile = "~/.gitignore_global"
 	editor = vim
+	eol = lf
 [user]
 	name = Jaron Zijlstra
 	email = support@jaronline.dev
@@ -13,10 +14,7 @@
 	smudge = git-lfs smudge -- %f
 [alias]
 	rp = rev-parse
-	ba = branch -a
-	bd = branch -d
-	bD = branch -D
-	c = commit
+	c = commit --verbose
 	can = commit --amend --no-edit
 	co = checkout
 	cp = cherry-pick
@@ -29,6 +27,36 @@
 	st = status
 	sub = submodule
 	la = config --get-regexp '^alias\\.'
+	cmsg = commit --message
+	psup = push --set-upstream origin HEAD
+	sw = switch
+	log = log --oneline --decorate --graph
+	pf = push --force-with-lease
+	pf-f = push --force
+	swc = switch --create
+	b = branch
+	br = branch --remote
+	ba = branch --all
+	bd = branch --delete
+	bd-f = branch --delete --force
+	a = add
+	aa = add --all
+	cam = commit --all --message
+	ca = commit --verbose --all
+	d = diff
+	rb = rebase
+	bm = branch --movea
+	f = fetch
+	fa = fetch --all --tags --prune
+	fo = fetch origin
+	wt = worktree
+	wta = worktree add
+	wtls = worktree list
+	wtl = worktree lock
+	wtmv = worktree move
+	wtp = worktree prune
+	wtrm = worktree remove
+	wtu = worktree unlock
 [init]
 	defaultBranch = main
 [pull]
@@ -42,3 +70,9 @@
 	autostash = true
 [push]
 	autoSetupRemote = true
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[fetch]
+	prune = true
