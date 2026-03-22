@@ -109,3 +109,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Zoxide
 eval "$(zoxide init zsh --cmd cd)"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
