@@ -30,5 +30,32 @@
         "scminput": false,
         "cpp": true
     },
-    "geminicodeassist.inlineSuggestions.enableAuto": false
+    "geminicodeassist.inlineSuggestions.enableAuto": false,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "git.confirmSync": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.insertSpaces": false,
+        "editor.tabSize": 4
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.insertSpaces": false,
+        "editor.tabSize": 4
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.insertSpaces": false,
+        "editor.tabSize": 4
+    },
+    "[github-actions-workflow]": {
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+    "[yaml]": {
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    }
 }
