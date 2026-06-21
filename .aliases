@@ -24,3 +24,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # Yarn
 alias ysb='yarn set version berry && yarn config set enableGlobalCache true && yarn config set nodeLinker node-modules && echo "" >> .gitignore && echo "# Yarn files" >> .gitignore && echo ".yarn/install-state.gz" >> .gitignore && echo ".yarn/build-state.yml" >> .gitignore'
+
+# Git
+alias frequentgit='history | cut -c 8- | grep git | sort | uniq -c  | sort -n -r | head -n 10'

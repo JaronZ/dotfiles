@@ -97,3 +97,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Zoxide
 eval "$(zoxide init bash --cmd cd)"
+alias protontricks='flatpak run com.github.Matoking.protontricks'
+alias protontricks-launch='flatpak run --command=protontricks-launch com.github.Matoking.protontricks'
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

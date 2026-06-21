@@ -45,7 +45,7 @@
 	ca = commit --verbose --all
 	d = diff
 	rb = rebase
-	bm = branch --movea
+	bm = branch --move
 	f = fetch
 	fa = fetch --all --tags --prune
 	fo = fetch origin
@@ -57,6 +57,7 @@
 	wtp = worktree prune
 	wtrm = worktree remove
 	wtu = worktree unlock
+	sta = status -uall
 [init]
 	defaultBranch = main
 [pull]
@@ -76,3 +77,5 @@
 	format = ssh
 [fetch]
 	prune = true
+[credential]
+	helper = cache

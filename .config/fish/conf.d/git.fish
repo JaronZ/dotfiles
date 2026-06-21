@@ -28,4 +28,25 @@ function __fish_git_aliases
 end
 
 __fish_git_aliases
-functions -e __fish_git_aliases 
+functions -e __fish_git_aliases
+
+function git-prune-local-branches --description 'prune all local git branches without remote tracking branch'
+	git fetch --all --prune || return 1
+	git remote set-head origin --auto || return 1
+
+	for branch in (git for-each-ref refs/heads --format="%(refname:short)")
+		if git config --get "branch.$branch.remote" > /dev/null
+			if set upstream (git rev-parse --abbrev-ref "$branch@{upstream}" 2>/dev/null)
+				git fetch --update-head-ok . "$upstream:$branch"
+				set -e upstream
+			else
+				if [ "$branch" = (git branch --show-current) ]
+					echo "The current branch will be deleted because it has already been merged."
+					echo "You are now in detached head mode."
+					git switch --detach origin/HEAD
+				end
+				git branch -D "$branch"
+			end
+		end
+	end
+end
