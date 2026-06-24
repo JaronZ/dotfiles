@@ -1,6 +1,6 @@
 # Dotfiles
 
-Dotfiles for my personal (Arch-based) Linux installation.
+Dotfiles for my personal CachyOS Linux installation.
 
 ## Requirements
 
