@@ -1,0 +1,82 @@
+[core]
+	autocrlf = false
+	excludesfile = "~/.gitignore_global"
+	editor = vim
+	eol = lf
+[user]
+	name = Jaron Zijlstra
+	email = support@jaronline.dev
+	signingKey = /home/jaronz/.ssh/id_ed25519.pub
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[alias]
+	rp = rev-parse
+	c = commit --verbose
+	can = commit --amend --no-edit
+	co = checkout
+	cp = cherry-pick
+	l = pull
+	p = push
+	pls = push --force-with-lease
+	rbi = rebase -i
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbq = rebase --quit
+	st = status
+	sub = submodule
+	la = config --get-regexp '^alias\\.'
+	cmsg = commit --message
+	psup = push --set-upstream origin HEAD
+	sw = switch
+	log = log --oneline --decorate --graph
+	pf = push --force-with-lease
+	pf-f = push --force
+	swc = switch --create
+	b = branch
+	br = branch --remote
+	ba = branch --all
+	bd = branch --delete
+	bd-f = branch --delete --force
+	a = add
+	aa = add --all
+	cam = commit --all --message
+	ca = commit --verbose --all
+	d = diff
+	rb = rebase
+	bm = branch --move
+	f = fetch
+	fa = fetch --all --tags --prune
+	fo = fetch origin
+	wt = worktree
+	wta = worktree add
+	wtls = worktree list
+	wtl = worktree lock
+	wtmv = worktree move
+	wtp = worktree prune
+	wtrm = worktree remove
+	wtu = worktree unlock
+	sta = status -uall
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[merge]
+	tool = vscode
+	autostash = true
+[mergetool "vscode"]
+	cmd = code -wr --diff $LOCAL $REMOTE
+[rebase]
+	autostash = true
+[push]
+	autoSetupRemote = true
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[fetch]
+	prune = true
+[credential]
+	helper = cache
